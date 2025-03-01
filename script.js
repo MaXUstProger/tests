@@ -20,12 +20,12 @@ function choosing_an_answer0 (event) {
     if(event.target.tagName == 'INPUT') {
         //проверяем что выбранный класс имеет значение mistake deactivation0
         if(event.target.className == 'mistake0 deactivation0') {
-            //выбираем блок с классом .answer
+            //выбираем блок с классом .answer0
             var answer_3 = document.querySelector('.answer0');
             //вставляем текст в нужный блок
             answer_3.innerHTML = 'Неверно';
         } else {
-            //выбираем блок с классом .answer
+            //выбираем блок с классом .answer0
             var answer_3 = document.querySelector('.answer0');
             //вставляем текст в нужный блок
             answer_3.innerHTML = 'Верно';
@@ -54,12 +54,12 @@ function choosing_an_answer1 (event) {
     if(event.target.tagName == 'INPUT') {
         //проверяем что выбранный класс имеет значение mistake deactivation1
         if(event.target.className == 'mistake1 deactivation1') {
-            //выбираем блок с классом .answer
+            //выбираем блок с классом .answer1
             var answer_3 = document.querySelector('.answer1');
             //вставляем текст в нужный блок
             answer_3.innerHTML = 'Неверно';
         } else {
-            //выбираем блок с классом .answer
+            //выбираем блок с классом .answer1
             var answer_3 = document.querySelector('.answer1');
             //вставляем текст в нужный блок
             answer_3.innerHTML = 'Верно';
