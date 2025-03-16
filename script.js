@@ -10,6 +10,8 @@ list1.addEventListener('click', choosing_an_answer1);
 
 //------------------------
 
+//начальное знаечние счетчика правильных ответов
+var x = 0;
 //скрипт для первого вопроса
 //ф-ция для вывода верного или неверного ответа и деактивации переключателей
 function choosing_an_answer0 (event) {
@@ -20,15 +22,15 @@ function choosing_an_answer0 (event) {
     if(event.target.tagName == 'INPUT') {
         //проверяем что выбранный класс имеет значение mistake deactivation0
         if(event.target.className == 'mistake0 deactivation0') {
-            //выбираем блок с классом .answer0
-            var answer_3 = document.querySelector('.answer0');
+            //выбираем блок с классом .answer
+            var decision_0 = document.querySelector('.answer0');
             //вставляем текст в нужный блок
-            answer_3.innerHTML = 'Неверно';
+            decision_0.innerHTML = 'Неверно';
         } else {
-            //выбираем блок с классом .answer0
-            var answer_3 = document.querySelector('.answer0');
+            //выбираем блок с классом .answer
+            var decision_0 = document.querySelector('.answer0');
             //вставляем текст в нужный блок
-            answer_3.innerHTML = 'Верно';
+            decision_0.innerHTML = 'Верно';
         }
         //делаем все переключатели неактивными
         //получаем все эл-ты с классом .deactivation0
@@ -39,7 +41,15 @@ function choosing_an_answer0 (event) {
         for(var i = 0; i <= arr_ans_1.length - 1; i++) {
             arr_ans_1[i].disabled = true;
         }
-}
+        //счетчик правильных ответов
+        //если конечный ответ будет верным, то значение счетчика увеличивается на единицу
+        if(decision_0.innerHTML == 'Верно') {
+            //задаем глобальную область видимости для переменной x
+            var y = window.x++;
+            var correct_answers = document.querySelector('.total');
+            correct_answers.innerHTML = x;
+        }
+    }
 }
 
 //------------------------
@@ -54,15 +64,15 @@ function choosing_an_answer1 (event) {
     if(event.target.tagName == 'INPUT') {
         //проверяем что выбранный класс имеет значение mistake deactivation1
         if(event.target.className == 'mistake1 deactivation1') {
-            //выбираем блок с классом .answer1
-            var answer_3 = document.querySelector('.answer1');
+            //выбираем блок с классом .answer
+            var decision_1 = document.querySelector('.answer1');
             //вставляем текст в нужный блок
-            answer_3.innerHTML = 'Неверно';
+            decision_1.innerHTML = 'Неверно';
         } else {
-            //выбираем блок с классом .answer1
-            var answer_3 = document.querySelector('.answer1');
+            //выбираем блок с классом .answer
+            var decision_1 = document.querySelector('.answer1');
             //вставляем текст в нужный блок
-            answer_3.innerHTML = 'Верно';
+            decision_1.innerHTML = 'Верно';
         }
         //делаем все переключатели неактивными
         //получаем все эл-ты с классом .deactivation1
@@ -73,5 +83,12 @@ function choosing_an_answer1 (event) {
         for(var i = 0; i <= arr_ans_1.length - 1; i++) {
             arr_ans_1[i].disabled = true;
         }
-}
+        //если конечный ответ будет верным, то значение счетчика увеличивается на единицу
+        if(decision_1.innerHTML == 'Верно') {
+            //задаем глобальную область видимости для переменной x
+            var y = window.x++;
+            var correct_answers = document.querySelector('.total');
+            correct_answers.innerHTML = x;
+        }
+    }
 }
