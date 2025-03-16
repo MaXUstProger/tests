@@ -1,0 +1,9 @@
+div.counter {
+    /*рамка для счетчика*/
+    border: 1px solid black;
+    /*ширина подгоняется под контент*/
+    border-radius: 15px;
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+}
